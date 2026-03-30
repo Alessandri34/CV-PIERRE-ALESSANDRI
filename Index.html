@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Pierre Alessandri - Commercial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Nouvelle police Montserrat, plus géométrique et élégante pour les CV */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f1f5f9;
+        }
+
+        /* Animation d'apparition */
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Style de la timeline */
+        .timeline-container {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 0.25rem;
+            top: 0.5rem;
+            bottom: 0;
+            width: 2px;
+            background-color: #e2e8f0;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -0.15rem;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #3b82f6;
+        }
+
+        /* Cacher les boutons à l'impression */
+        @media print {
+            body { background-color: white; }
+            .no-print { display: none !important; }
+            .print-shadow-none { box-shadow: none !important; margin: 0 !important; max-width: 100% !important;}
+            .page-break-inside-avoid { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased p-4 md:p-8">
+
+    <!-- Bouton d'impression flottant -->
+    <button onclick="window.print()" class="no-print fixed bottom-6 right-6 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-full shadow-lg transition-all flex items-center gap-2 z-50 font-medium">
+        <i class="fas fa-print"></i> Imprimer / PDF
+    </button>
+
+    <!-- Conteneur Principal du CV -->
+    <div class="fade-in max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden print-shadow-none flex flex-col md:flex-row">
+
+        <!-- BARRE LATÉRALE (Sidebar) -->
+        <aside class="md:w-1/3 bg-slate-900 text-white p-6 lg:p-10">
+            <div class="mb-10 text-center md:text-left">
+                <img src="PHOTO PRO PIERRE.jpg" alt="Photo de Pierre Alessandri" class="w-32 h-32 md:w-32 lg:w-40 md:h-32 lg:h-40 rounded-full object-cover border-4 border-slate-700 shadow-xl mx-auto md:mx-0 mb-6" onerror="this.src='https://ui-avatars.com/api/?name=Pierre+Alessandri&background=1e293b&color=fff&size=160'">
+                <!-- Taille de police adaptative (md:text-2xl) pour éviter le débordement sur les écrans moyens -->
+                <h1 class="text-3xl md:text-2xl lg:text-3xl xl:text-4xl font-bold uppercase tracking-wider mb-2">Pierre<br><span class="text-blue-400 whitespace-nowrap">Alessandri</span></h1>
+                <h2 class="text-xl md:text-lg lg:text-xl font-light tracking-widest text-slate-300">Commercial</h2>
+            </div>
+
+            <!-- Contact -->
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-500 pb-2 mb-4 inline-block">Contact</h3>
+                <ul class="space-y-4 text-sm text-slate-300">
+                    <li class="flex items-center gap-3"><i class="fas fa-envelope text-blue-400 w-5 shrink-0"></i> <span class="break-all">pierre.alessandri34@gmail.com</span></li>
+                    <li class="flex items-center gap-3"><i class="fas fa-phone text-blue-400 w-5 shrink-0"></i> <span>+33 7 63 67 82 92</span></li>
+                    <li class="flex items-start gap-3"><i class="fas fa-map-marker-alt text-blue-400 w-5 mt-1 shrink-0"></i> <div>14B Avenue Jean Jaurès<br>34170</div></li>
+                    <li class="flex items-center gap-3"><i class="fas fa-car text-blue-400 w-5 shrink-0"></i> <span>Permis B & Véhiculé</span></li>
+                </ul>
+            </div>
+
+            <!-- Hard Skills -->
+            <div class="mb-8 page-break-inside-avoid">
+                <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-500 pb-2 mb-4 inline-block">Hard Skills</h3>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Suite Adobe CC</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Bureautique</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">CMS (Shopify, WP)</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">SEA & SEO</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Figma</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Scrapping BDD</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Outils CRM</span>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="mb-8 page-break-inside-avoid">
+                <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-500 pb-2 mb-4 inline-block">Soft Skills</h3>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Négociation</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Ténacité</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Écoute & Empathie</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Force de persuasion</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Adaptabilité</span>
+                    <span class="bg-slate-800 px-3 py-1 rounded-full border border-slate-700">Gestion du stress</span>
+                </div>
+            </div>
+
+            <!-- Langues -->
+            <div class="mb-8 page-break-inside-avoid">
+                <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-500 pb-2 mb-4 inline-block">Langues</h3>
+                <ul class="space-y-2 text-sm text-slate-300">
+                    <li><span class="font-semibold text-white">Français:</span> Maternelle</li>
+                    <li><span class="font-semibold text-white">Anglais:</span> B2</li>
+                    <li><span class="font-semibold text-white">Espagnol:</span> B1</li>
+                </ul>
+            </div>
+
+            <!-- Références -->
+            <div class="page-break-inside-avoid">
+                <h3 class="text-lg font-semibold uppercase border-b-2 border-blue-500 pb-2 mb-4 inline-block">Références</h3>
+                <ul class="space-y-3 text-xs text-slate-300 break-words">
+                    <li><strong class="text-white">CESAME SUP:</strong> Mme NGUYEN<br>+33 6 60 87 35 35</li>
+                    <li><strong class="text-white">GYRAYA:</strong> M. COUTURIER<br>+33 6 69 02 84 83</li>
+                    <li><strong class="text-white">DRESSCODE:</strong> M. AYACHI<br>+33 6 09 45 83 42</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- CONTENU PRINCIPAL (Main) -->
+        <main class="md:w-2/3 p-8 md:p-12">
+
+            <!-- Profil -->
+            <section class="mb-10">
+                <h3 class="text-2xl font-bold text-slate-800 uppercase mb-4 flex items-center gap-3">
+                    <i class="fas fa-user-circle text-blue-600"></i> Profil
+                </h3>
+                <p class="text-slate-600 leading-relaxed text-justify">
+                    De nature déterminé, j'ai une expérience significative en vente, prospection terrain/téléphonique, communication et gestion de magasin. Je suis un profil polyvalent qui sait s'adapter à toutes les situations et besoins. Mes expériences professionnelles reflètent ma rigueur, ma ténacité face aux objections et mon goût prononcé pour le challenge.
+                </p>
+            </section>
+
+            <!-- Expériences -->
+            <section class="mb-10">
+                <h3 class="text-2xl font-bold text-slate-800 uppercase mb-6 flex items-center gap-3">
+                    <i class="fas fa-briefcase text-blue-600"></i> Expériences Professionnelles
+                </h3>
+
+                <!-- NOUVELLES EXPÉRIENCES SUISSES -->
+                <div class="timeline-container page-break-inside-avoid">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-lg font-bold text-slate-800">Commercial en Assurances</h4>
+                    <div class="text-blue-600 font-semibold text-sm mb-1">MI-Beratung (Suisse)</div>
+                    <div class="text-slate-500 text-sm mb-2"><i class="far fa-calendar-alt"></i> Février 2025 - Décembre 2025</div>
+                    <ul class="list-disc list-inside text-slate-600 text-sm space-y-1 ml-1">
+                        <li>Prospection téléphonique active et développement du portefeuille client.</li>
+                        <li>Prise en charge et conversion de rendez-vous qualifiés fournis.</li>
+                        <li>Analyse des besoins, vente de polices d'assurance et "cassage" de contrats concurrents.</li>
+                        <li>Missions commerciales polyvalentes pour assurer la croissance du CA.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-container page-break-inside-avoid">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-lg font-bold text-slate-800">Commercial en Assurances</h4>
+                    <div class="text-blue-600 font-semibold text-sm mb-1">HESTIA (Suisse)</div>
+                    <div class="text-slate-500 text-sm mb-2"><i class="far fa-calendar-alt"></i> Août 2024 - Janvier 2025</div>
+                    <ul class="list-disc list-inside text-slate-600 text-sm space-y-1 ml-1">
+                        <li>Prospection téléphonique (Cold calling) pour l'acquisition de nouveaux clients.</li>
+                        <li>Conduite d'entretiens de vente à partir de rendez-vous fournis.</li>
+                        <li>Négociation, vente de contrats d'assurance et aide à la résiliation.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-container page-break-inside-avoid">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-lg font-bold text-slate-800">Commercial Terrain en Sécurité</h4>
+                    <div class="text-blue-600 font-semibold text-sm mb-1">GALATHEA (Suisse)</div>
+                    <div class="text-slate-500 text-sm mb-2"><i class="far fa-calendar-alt"></i> Mars 2024 - Juillet 2024</div>
+                    <ul class="list-disc list-inside text-slate-600 text-sm space-y-1 ml-1">
+                        <li>Prospection directe et vente en porte-à-porte (B2C/B2B).</li>
+                        <li>Placement de rendez-vous qualifiés et conduite des entretiens physiques.</li>
+                        <li>Négociation, closing direct et résilience face aux objections terrain.</li>
+                    </ul>
+                </div>
+
+                <!-- ANCIENNES EXPÉRIENCES (Synthétisées) -->
+                <div class="timeline-container page-break-inside-avoid">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-lg font-bold text-slate-800">Directeur de Magasin</h4>
+                    <div class="text-blue-600 font-semibold text-sm mb-1">ILLIMITED STORE</div>
+                    <div class="text-slate-500 text-sm mb-2"><i class="far fa-calendar-alt"></i> Septembre 2023 - Février 2024</div>
+                    <ul class="list-disc list-inside text-slate-600 text-sm space-y-1 ml-1">
+                        <li>Management d'équipe, gestion des plannings, des stocks et vente en surface.</li>
+                        <li>Merchandising et élaboration de stratégies de croissance.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-container page-break-inside-avoid">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-lg font-bold text-slate-800">Commercial & Resp. Communication</h4>
+                    <div class="text-blue-600 font-semibold text-sm mb-1">CESAME SUP</div>
+                    <div class="text-slate-500 text-sm mb-2"><i class="far fa-calendar-alt"></i> Mars 2023 - Août 2023</div>
+                    <ul class="list-disc list-inside text-slate-600 text-sm space-y-1 ml-1">
+                        <li>Négociation, prospection (Cold calling), campagnes d'e-mailing et scrapping BDD.</li>
+                        <li>Création de visuels (Adobe CC) et campagnes SEA.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-container page-break-inside-avoid">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-lg font-bold text-slate-800">Adjoint de Direction</h4>
+                    <div class="text-blue-600 font-semibold text-sm mb-1">GYRAYA</div>
+                    <div class="text-slate-500 text-sm mb-2"><i class="far fa-calendar-alt"></i> Septembre 2022 - Février 2023</div>
+                </div>
+
+                <div class="timeline-container page-break-inside-avoid">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-lg font-bold text-slate-800">Commerciale Énergie Renouvelable</h4>
+                    <div class="text-blue-600 font-semibold text-sm mb-1">GREENLOC</div>
+                    <div class="text-slate-500 text-sm mb-2"><i class="far fa-calendar-alt"></i> Janvier 2022 - Août 2022</div>
+                </div>
+
+                <div class="timeline-container page-break-inside-avoid">
+                    <div class="timeline-dot"></div>
+                    <h4 class="text-lg font-bold text-slate-800">Vendeur Prêt-à-porter</h4>
+                    <div class="text-blue-600 font-semibold text-sm mb-1">DRESSCODE</div>
+                    <div class="text-slate-500 text-sm mb-2"><i class="far fa-calendar-alt"></i> Septembre 2020 - Décembre 2021</div>
+                </div>
+            </section>
+
+            <!-- Parcours Scolaire -->
+            <section>
+                <h3 class="text-2xl font-bold text-slate-800 uppercase mb-6 flex items-center gap-3">
+                    <i class="fas fa-graduation-cap text-blue-600"></i> Formation
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 page-break-inside-avoid">
+                        <h4 class="font-bold text-slate-800">Master 2 Ingénieur d'Affaires</h4>
+                        <div class="text-blue-600 text-sm mb-2">Septembre 2022 - Juin 2024</div>
+                        <p class="text-xs text-slate-600">Expertise en gestion de projets complexes, négociation et développement commercial.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 page-break-inside-avoid">
+                        <h4 class="font-bold text-slate-800">Bachelor Designer UI&UX</h4>
+                        <div class="text-blue-600 text-sm mb-2">Septembre 2021 - Juin 2022</div>
+                        <p class="text-xs text-slate-600">Conception graphique, Suite Adobe, CMS, Marketing digital.</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 page-break-inside-avoid">
+                        <h4 class="font-bold text-slate-800">BTS MCO</h4>
+                        <div class="text-blue-600 text-sm mb-2">Septembre 2018 - Juin 2020</div>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-100 page-break-inside-avoid">
+                        <h4 class="font-bold text-slate-800">Baccalauréat (Maturité)</h4>
+                        <div class="text-blue-600 text-sm mb-2">Jusqu'en Juin 2020</div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
